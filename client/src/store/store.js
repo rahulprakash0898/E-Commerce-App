@@ -32,6 +32,7 @@ import shopAddressSlice from "./shop/address-slice";
 import shopOrderSlice from "./shop/order-slice";
 import shopSearchSlice from "./shop/search-slice";
 import shopReviewSlice from "./shop/review-slice";
+import shopWishlistSlice from "./shop/wishlist-slice";
 import commonFeatureSlice from "./common-slice";
 
 const store = configureStore({
@@ -47,9 +48,10 @@ const store = configureStore({
     shopOrder: shopOrderSlice,
     shopSearch: shopSearchSlice,
     shopReview: shopReviewSlice,
+    shopWishlist: shopWishlistSlice,
 
     commonFeature: commonFeatureSlice,
   },
 });
 
-export default store;
+export default store;

@@ -1,4 +1,4 @@
-import { HousePlug, LogOut, Menu, ShoppingCart, UserCog } from "lucide-react";
+import { Heart, HousePlug, LogOut, Menu, ShoppingCart, UserCog } from "lucide-react";
 import {
   Link,
   useLocation,
@@ -22,6 +22,7 @@ import { logoutUser } from "@/store/auth-slice";
 import UserCartWrapper from "./UserCartWrapper";
 import { useEffect, useState } from "react";
 import { fetchCartItems } from "@/store/shop/cart-slice";
+import { getWishlistItems } from "@/store/shop/wishlist-slice";
 import { Label } from "../ui/label";
 
 function MenuItems() {
@@ -67,6 +68,7 @@ function MenuItems() {
 function HeaderRightContent() {
   const { user } = useSelector((state) => state.auth);
   const { cartItems } = useSelector((state) => state.shopCart);
+  const { wishlistItems } = useSelector((state) => state.shopWishlist);
   const [openCartSheet, setOpenCartSheet] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -76,13 +78,28 @@ function HeaderRightContent() {
   }
 
   useEffect(() => {
-    dispatch(fetchCartItems(user?.id));
-  }, [dispatch]);
-
-  console.log(cartItems, "Rahul");
+    if (user?.id) {
+      dispatch(fetchCartItems(user?.id));
+      dispatch(getWishlistItems(user?.id));
+    }
+  }, [dispatch, user]);
 
   return (
     <div className="flex lg:items-center lg:flex-row flex-col gap-4">
+      <Button
+        onClick={() => navigate("/shop/account")}
+        variant="outline"
+        size="icon"
+        className="relative"
+        title="My Wishlist"
+      >
+        <Heart className="w-5 h-5 text-red-500" />
+        <span className="absolute top-[-5px] right-[2px] font-bold text-sm text-red-600">
+          {wishlistItems?.length || 0}
+        </span>
+        <span className="sr-only">Wishlist</span>
+      </Button>
+
       <Sheet open={openCartSheet} onOpenChange={() => setOpenCartSheet(false)}>
         <Button
           onClick={() => setOpenCartSheet(true)}
@@ -108,9 +125,9 @@ function HeaderRightContent() {
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Avatar className="bg-black">
+          <Avatar className="bg-black cursor-pointer">
             <AvatarFallback className="bg-black text-white font-extrabold">
-              {user?.userName[0].toUpperCase()}
+              {user?.userName?.[0]?.toUpperCase()}
             </AvatarFallback>
           </Avatar>
         </DropdownMenuTrigger>
@@ -131,6 +148,7 @@ function HeaderRightContent() {
     </div>
   );
 }
+
 
 function ShoppingHeader() {
   const { isAuthenticated } = useSelector((state) => state.auth);

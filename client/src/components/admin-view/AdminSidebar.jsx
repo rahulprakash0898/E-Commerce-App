@@ -1,6 +1,7 @@
 import {
   BadgeCheck,
   ChartNoAxesCombined,
+  Images,
   LayoutDashboard,
   ShoppingBasket,
 } from "lucide-react";
@@ -27,7 +28,14 @@ const adminSidebarMenuItems = [
     path: "/admin/orders",
     icon: <BadgeCheck />,
   },
+  {
+    id: "features",
+    label: "Banners",
+    path: "/admin/features",
+    icon: <Images />,
+  },
 ];
+
 
 function MenuItems({ setOpen }) {
   const navigate = useNavigate();
