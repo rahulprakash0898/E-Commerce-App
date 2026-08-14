@@ -12,7 +12,7 @@
 
 ## 🌐 Live Demo & Credentials
 
-* 🔗 **Live Web Application:** [https://your-vercel-app-url.vercel.app](https://your-vercel-app-url.vercel.app) *(Replace with your Vercel URL)*
+* 🔗 **Live Web Application:** [https://e-commerce-app-sigma-nine.vercel.app/](https://e-commerce-app-sigma-nine.vercel.app/) *(Replace with your Vercel URL)*
 * 📁 **Postman API Collection:** [`E-Commerce.postman_collection.json`](./E-Commerce.postman_collection.json)
 * 📘 **Interview Explanation Guide:** [`MERN_Ecommerce_Interview_Explanation.md`](./MERN_Ecommerce_Interview_Explanation.md)
 
