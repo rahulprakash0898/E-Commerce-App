@@ -1,0 +1,3598 @@
+{
+  "info": {
+    "_postman_id": "22b2aad6-7ed2-4306-bdb2-be4d3a5d841b",
+    "name": "E-Commerce",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39226341"
+  },
+  "item": [
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Products",
+          "item": [
+            {
+              "name": "Upload Product Image",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "my_file",
+                      "type": "file",
+                      "uuid": "d1d77b5f-4cf5-4287-a465-96124ab91f53",
+                      "src": "/E:/Rahul/Resume_page-0001.jpg"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{Local_URL}}admins/products/upload-image",
+                  "host": [
+                    "{{Local_URL}}admins"
+                  ],
+                  "path": [
+                    "products",
+                    "upload-image"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Upload Product Image",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "my_file",
+                          "type": "file",
+                          "uuid": "d1d77b5f-4cf5-4287-a465-96124ab91f53",
+                          "src": "/E:/Rahul/Resume_page-0001.jpg"
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "{{Local_URL}}admins/products/upload-image",
+                      "host": [
+                        "{{Local_URL}}admins"
+                      ],
+                      "path": [
+                        "products",
+                        "upload-image"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "718"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"2ce-ID0K2RfyWP4wLT4iQTq0a8cRhDo\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 07:47:28 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"result\": {\n        \"asset_id\": \"86d3f805d7e20014b6b132d20115c041\",\n        \"public_id\": \"osvqrxspjzezuifbdioc\",\n        \"version\": 1786693647,\n        \"version_id\": \"8479c4b52c798a2e7f7cd20a7df8156e\",\n        \"signature\": \"83f35886f6ec8cf891c03d0aaa8aedf81eb45c5f\",\n        \"width\": 1240,\n        \"height\": 1754,\n        \"format\": \"jpg\",\n        \"resource_type\": \"image\",\n        \"created_at\": \"2026-08-14T07:47:27Z\",\n        \"tags\": [],\n        \"bytes\": 1018180,\n        \"type\": \"upload\",\n        \"etag\": \"6d744e74bb06e44f9b41c37ef82b5001\",\n        \"placeholder\": false,\n        \"url\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786693647/osvqrxspjzezuifbdioc.jpg\",\n        \"secure_url\": \"https://res.cloudinary.com/dulv7fsxs/image/upload/v1786693647/osvqrxspjzezuifbdioc.jpg\",\n        \"asset_folder\": \"\",\n        \"display_name\": \"osvqrxspjzezuifbdioc\",\n        \"api_key\": \"644351296759359\"\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "Add New Product",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\r\n  \"title\": \"Nike Air Max\",\r\n  \"description\": \"Comfortable running shoes\",\r\n  \"category\": \"men\",\r\n  \"brand\": \"nike\",\r\n  \"price\": 5000,\r\n  \"salePrice\": 4200,\r\n  \"totalStock\": 20,\r\n  \"averageReview\": 4.5\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}admins/products/add",
+                  "host": [
+                    "{{Local_URL}}admins"
+                  ],
+                  "path": [
+                    "products",
+                    "add"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Add New Product",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786693647/osvqrxspjzezuifbdioc.jpg\",\r\n  \"title\": \"Nike Air Max\",\r\n  \"description\": \"Comfortable running shoes\",\r\n  \"category\": \"men\",\r\n  \"brand\": \"nike\",\r\n  \"price\": 5000,\r\n  \"salePrice\": 4200,\r\n  \"totalStock\": 20,\r\n  \"averageReview\": 4.5\r\n}\r\n",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{Local_URL}}admins/products/add",
+                      "host": [
+                        "{{Local_URL}}admins"
+                      ],
+                      "path": [
+                        "products",
+                        "add"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "403"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"193-+HYMnOOs6uErqXJEG4Tu62b25Ok\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 07:51:15 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786693647/osvqrxspjzezuifbdioc.jpg\",\n        \"title\": \"Nike Air Max\",\n        \"description\": \"Comfortable running shoes\",\n        \"category\": \"men\",\n        \"brand\": \"nike\",\n        \"price\": 5000,\n        \"salePrice\": 4200,\n        \"totalStock\": 20,\n        \"averageReview\": 4.5,\n        \"_id\": \"6a7ec8f303738cb2b0cf28d6\",\n        \"createdAt\": \"2026-08-14T07:51:15.813Z\",\n        \"updatedAt\": \"2026-08-14T07:51:15.813Z\",\n        \"__v\": 0\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "Fetch All Products",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}admins/products/get",
+                  "host": [
+                    "{{Local_URL}}admins"
+                  ],
+                  "path": [
+                    "products",
+                    "get"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Fetch All Products",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}admins/products/get",
+                      "host": [
+                        "{{Local_URL}}admins"
+                      ],
+                      "path": [
+                        "products",
+                        "get"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "405"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"195-7x4kN0YEFUb2WDzjPEqJw6X7byY\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 07:51:49 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"6a7ec8f303738cb2b0cf28d6\",\n            \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786693647/osvqrxspjzezuifbdioc.jpg\",\n            \"title\": \"Nike Air Max\",\n            \"description\": \"Comfortable running shoes\",\n            \"category\": \"men\",\n            \"brand\": \"nike\",\n            \"price\": 5000,\n            \"salePrice\": 4200,\n            \"totalStock\": 20,\n            \"averageReview\": 4.5,\n            \"createdAt\": \"2026-08-14T07:51:15.813Z\",\n            \"updatedAt\": \"2026-08-14T07:51:15.813Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "name": "Edit a Product",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"title\": \"Nike Air Max 2024\",\r\n  \"price\": 5500,\r\n  \"salePrice\": 4500,\r\n  \"totalStock\": 15\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}admins/products/edit/6a7ec8f303738cb2b0cf28d6",
+                  "host": [
+                    "{{Local_URL}}admins"
+                  ],
+                  "path": [
+                    "products",
+                    "edit",
+                    "6a7ec8f303738cb2b0cf28d6"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Edit a Product",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"title\": \"Nike Air Max 2024\",\r\n  \"price\": 5500,\r\n  \"salePrice\": 4500,\r\n  \"totalStock\": 15\r\n}\r\n",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{Local_URL}}admins/products/edit/6a7ec8f303738cb2b0cf28d6",
+                      "host": [
+                        "{{Local_URL}}admins"
+                      ],
+                      "path": [
+                        "products",
+                        "edit",
+                        "6a7ec8f303738cb2b0cf28d6"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "408"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"198-yH4mVlRJfjakblQEWrx6MtQ7dKs\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 07:53:00 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a7ec8f303738cb2b0cf28d6\",\n        \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786693647/osvqrxspjzezuifbdioc.jpg\",\n        \"title\": \"Nike Air Max 2024\",\n        \"description\": \"Comfortable running shoes\",\n        \"category\": \"men\",\n        \"brand\": \"nike\",\n        \"price\": 5500,\n        \"salePrice\": 4500,\n        \"totalStock\": 15,\n        \"averageReview\": 4.5,\n        \"createdAt\": \"2026-08-14T07:51:15.813Z\",\n        \"updatedAt\": \"2026-08-14T07:53:00.043Z\",\n        \"__v\": 0\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "Delete a Product",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}admins/products/delete/6a7ec8f303738cb2b0cf28d6",
+                  "host": [
+                    "{{Local_URL}}admins"
+                  ],
+                  "path": [
+                    "products",
+                    "delete",
+                    "6a7ec8f303738cb2b0cf28d6"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Delete a Product",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}admins/products/delete/6a7ec8f303738cb2b0cf28d6",
+                      "host": [
+                        "{{Local_URL}}admins"
+                      ],
+                      "path": [
+                        "products",
+                        "delete",
+                        "6a7ec8f303738cb2b0cf28d6"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "57"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"39-1mG1hzjRU+/X1FJIGqbPC1TFgeA\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 07:54:16 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"message\": \"Product deleted successfully\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Orders",
+          "item": [
+            {
+              "name": "Get All Orders",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}admins/orders/get",
+                  "host": [
+                    "{{Local_URL}}admins"
+                  ],
+                  "path": [
+                    "orders",
+                    "get"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Get All Orders",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}admins/orders/get",
+                      "host": [
+                        "{{Local_URL}}admins"
+                      ],
+                      "path": [
+                        "orders",
+                        "get"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "1358"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"54e-yKH99zb0sVqPzketrtXQ6ezXe+E\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 11:16:51 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"addressInfo\": {\n                \"addressId\": \"6a7ecf46a8e0968eabb3ad84\",\n                \"address\": \"123 Main Street\",\n                \"city\": \"Mumbai\",\n                \"pincode\": \"400001\",\n                \"phone\": \"9876543210\",\n                \"notes\": \"Deliver in morning\"\n            },\n            \"_id\": \"6a7ed212cdc78e56727624d2\",\n            \"userId\": \"6a7dba9f7b387f52d134ea44\",\n            \"cartId\": \"6a7ecd80a8e0968eabb3ad72\",\n            \"cartItems\": [\n                {\n                    \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n                    \"title\": \"Nike Air Max\",\n                    \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n                    \"price\": \"5000\",\n                    \"quantity\": 1,\n                    \"_id\": \"6a7ed212cdc78e56727624d3\"\n                }\n            ],\n            \"orderStatus\": \"pending\",\n            \"paymentMethod\": \"paypal\",\n            \"paymentStatus\": \"pending\",\n            \"totalAmount\": 5000,\n            \"orderDate\": \"2026-08-14T00:00:00.000Z\",\n            \"paymentId\": \"26J26817KL348311G\",\n            \"__v\": 0\n        },\n        {\n            \"addressInfo\": {\n                \"addressId\": \"6a7ecf46a8e0968eabb3ad84\",\n                \"address\": \"123 Main Street\",\n                \"city\": \"Mumbai\",\n                \"pincode\": \"400001\",\n                \"phone\": \"9876543210\",\n                \"notes\": \"Deliver in morning\"\n            },\n            \"_id\": \"6a7edd98cdc78e56727624d5\",\n            \"userId\": \"6a7dba9f7b387f52d134ea44\",\n            \"cartId\": \"6a7ecd80a8e0968eabb3ad72\",\n            \"cartItems\": [\n                {\n                    \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n                    \"title\": \"Nike Air Max\",\n                    \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n                    \"price\": \"5000\",\n                    \"quantity\": 1,\n                    \"_id\": \"6a7edd98cdc78e56727624d6\"\n                }\n            ],\n            \"orderStatus\": \"confirmed\",\n            \"paymentMethod\": \"cod\",\n            \"paymentStatus\": \"pending\",\n            \"totalAmount\": 5000,\n            \"orderDate\": \"2026-08-14T00:00:00.000Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get Specific Order Details",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}admins/orders/details/6a7edd98cdc78e56727624d5",
+                  "host": [
+                    "{{Local_URL}}admins"
+                  ],
+                  "path": [
+                    "orders",
+                    "details",
+                    "6a7edd98cdc78e56727624d5"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Get Specific Order Details",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}admins/orders/details/6a7edd98cdc78e56727624d5",
+                      "host": [
+                        "{{Local_URL}}admins"
+                      ],
+                      "path": [
+                        "orders",
+                        "details",
+                        "6a7edd98cdc78e56727624d5"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "673"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"2a1-ECOnFdUct2mk4cvdG9mCYXurBKI\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 11:18:56 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"addressInfo\": {\n            \"addressId\": \"6a7ecf46a8e0968eabb3ad84\",\n            \"address\": \"123 Main Street\",\n            \"city\": \"Mumbai\",\n            \"pincode\": \"400001\",\n            \"phone\": \"9876543210\",\n            \"notes\": \"Deliver in morning\"\n        },\n        \"_id\": \"6a7edd98cdc78e56727624d5\",\n        \"userId\": \"6a7dba9f7b387f52d134ea44\",\n        \"cartId\": \"6a7ecd80a8e0968eabb3ad72\",\n        \"cartItems\": [\n            {\n                \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n                \"title\": \"Nike Air Max\",\n                \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n                \"price\": \"5000\",\n                \"quantity\": 1,\n                \"_id\": \"6a7edd98cdc78e56727624d6\"\n            }\n        ],\n        \"orderStatus\": \"confirmed\",\n        \"paymentMethod\": \"cod\",\n        \"paymentStatus\": \"pending\",\n        \"totalAmount\": 5000,\n        \"orderDate\": \"2026-08-14T00:00:00.000Z\",\n        \"__v\": 0\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "Update Order Status",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"orderStatus\": \"delivered\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}admins/orders/update/6a7edd98cdc78e56727624d5",
+                  "host": [
+                    "{{Local_URL}}admins"
+                  ],
+                  "path": [
+                    "orders",
+                    "update",
+                    "6a7edd98cdc78e56727624d5"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Update Order Status",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"orderStatus\": \"delivered\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{Local_URL}}admins/orders/update/6a7edd98cdc78e56727624d5",
+                      "host": [
+                        "{{Local_URL}}admins"
+                      ],
+                      "path": [
+                        "orders",
+                        "update",
+                        "6a7edd98cdc78e56727624d5"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "66"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"42-ZoRzt7XkCUZiQwdTlW8bP7MQGVI\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 11:20:34 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"message\": \"Order status is updated successfully!\"\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Register Admin",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userName\": \"admin\",\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"password123\",\r\n  \"role\": \"admin\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local_URL}}auths/register",
+              "host": [
+                "{{Local_URL}}auths"
+              ],
+              "path": [
+                "register"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Register User",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"userName\": \"Rahul\",\r\n  \"email\": \"rahul@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}auths/register",
+                  "host": [
+                    "{{Local_URL}}auths"
+                  ],
+                  "path": [
+                    "register"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2RiYTlmN2IzODdmNTJkMTM0ZWE0NCIsInJvbGUiOiJ1c2VyIiwiZW1haWwiOiJyYWh1bEBleGFtcGxlLmNvbSIsInVzZXJOYW1lIjoiUmFodWwiLCJpYXQiOjE3ODY2MjQ2NzEsImV4cCI6MTc4NzIyOTQ3MX0.1jyfZkgtGEGq_VoYtZUpvWVNC_c_NGj4lGImPbwk-KM; Path=/; HttpOnly"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "423"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1a7-ZE1NJofM+RMHUEIGVL5k6DipdOg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Aug 2026 12:37:51 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Registration successful\",\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2RiYTlmN2IzODdmNTJkMTM0ZWE0NCIsInJvbGUiOiJ1c2VyIiwiZW1haWwiOiJyYWh1bEBleGFtcGxlLmNvbSIsInVzZXJOYW1lIjoiUmFodWwiLCJpYXQiOjE3ODY2MjQ2NzEsImV4cCI6MTc4NjYyNTU3MX0.LvpIkEf6S1F04eIGmD0Pj8ot1HVfLnnoKEcvoknW9qo\",\n    \"user\": {\n        \"id\": \"6a7dba9f7b387f52d134ea44\",\n        \"role\": \"user\",\n        \"email\": \"rahul@example.com\",\n        \"userName\": \"Rahul\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"rahul@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local_URL}}auths/login",
+              "host": [
+                "{{Local_URL}}auths"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Login User",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"rahul@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}auths/login",
+                  "host": [
+                    "{{Local_URL}}auths"
+                  ],
+                  "path": [
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2RiYTlmN2IzODdmNTJkMTM0ZWE0NCIsInJvbGUiOiJ1c2VyIiwiZW1haWwiOiJyYWh1bEBleGFtcGxlLmNvbSIsInVzZXJOYW1lIjoiUmFodWwiLCJpYXQiOjE3ODY2MjQ3MTUsImV4cCI6MTc4NzIyOTUxNX0.QScW2_1GdQzJOR6qHhvI1I2HFV6Eev6bkv2_ZDUbQEo; Path=/; HttpOnly"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "422"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1a6-sVYv3TI2Hsz7yJm6r2+31zOJwiA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Aug 2026 12:38:35 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Logged in successfully\",\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2RiYTlmN2IzODdmNTJkMTM0ZWE0NCIsInJvbGUiOiJ1c2VyIiwiZW1haWwiOiJyYWh1bEBleGFtcGxlLmNvbSIsInVzZXJOYW1lIjoiUmFodWwiLCJpYXQiOjE3ODY2MjQ3MTUsImV4cCI6MTc4NjYyNTYxNX0.sna3wI536_Mzp8f91P_u3_eE2pauTYj3cxZMQlk4uoY\",\n    \"user\": {\n        \"email\": \"rahul@example.com\",\n        \"role\": \"user\",\n        \"id\": \"6a7dba9f7b387f52d134ea44\",\n        \"userName\": \"Rahul\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Check Authenticated User",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local_URL}}auths/check-auths",
+              "host": [
+                "{{Local_URL}}auths"
+              ],
+              "path": [
+                "check-auths"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Check Authenticated User",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}auths/check-auths",
+                  "host": [
+                    "{{Local_URL}}auths"
+                  ],
+                  "path": [
+                    "check-auths"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "184"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"b8-leF6uVEmYDhQsqHoFo7/miitGkw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Aug 2026 12:39:32 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Authenticated user!\",\n    \"user\": {\n        \"id\": \"6a7dba9f7b387f52d134ea44\",\n        \"role\": \"user\",\n        \"email\": \"rahul@example.com\",\n        \"userName\": \"Rahul\",\n        \"iat\": 1786624715,\n        \"exp\": 1786625615\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Refresh-Token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"refresh-token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2RiYTlmN2IzODdmNTJkMTM0ZWE0NCIsInJvbGUiOiJ1c2VyIiwiZW1haWwiOiJyYWh1bEBleGFtcGxlLmNvbSIsInVzZXJOYW1lIjoiUmFodWwiLCJpYXQiOjE3ODY2MjQ5NjMsImV4cCI6MTc4NzIyOTc2M30.j-brXXyNzsh_ndykqh7y-DsXQmQPFsJ_G6gFuEDOtkU\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local_URL}}auths/refresh-token",
+              "host": [
+                "{{Local_URL}}auths"
+              ],
+              "path": [
+                "refresh-token"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Refresh-Token",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"refresh-token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2RiYTlmN2IzODdmNTJkMTM0ZWE0NCIsInJvbGUiOiJ1c2VyIiwiZW1haWwiOiJyYWh1bEBleGFtcGxlLmNvbSIsInVzZXJOYW1lIjoiUmFodWwiLCJpYXQiOjE3ODY2MjQ5NjMsImV4cCI6MTc4NzIyOTc2M30.j-brXXyNzsh_ndykqh7y-DsXQmQPFsJ_G6gFuEDOtkU\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}auths/refresh-token",
+                  "host": [
+                    "{{Local_URL}}auths"
+                  ],
+                  "path": [
+                    "refresh-token"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "428"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1ac-PpR9gEqtsnI0Je+dkpJlBXcOBNM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Aug 2026 12:43:39 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Token refreshed successfully\",\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhN2RiYTlmN2IzODdmNTJkMTM0ZWE0NCIsInJvbGUiOiJ1c2VyIiwiZW1haWwiOiJyYWh1bEBleGFtcGxlLmNvbSIsInVzZXJOYW1lIjoiUmFodWwiLCJpYXQiOjE3ODY2MjUwMTksImV4cCI6MTc4NjYyNTkxOX0.KS3bUFiZ9k770Ss-GXJLRnvYEKEuJFzf8JBfKhClfpE\",\n    \"user\": {\n        \"id\": \"6a7dba9f7b387f52d134ea44\",\n        \"role\": \"user\",\n        \"email\": \"rahul@example.com\",\n        \"userName\": \"Rahul\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update-Profile",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userName\": \"password1234\",\r\n  \"oldPassword\": \"password123\",\r\n  \"newPassword\": \"newpassword123\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local_URL}}auths/update-profile/6a7dba9f7b387f52d134ea44",
+              "host": [
+                "{{Local_URL}}auths"
+              ],
+              "path": [
+                "update-profile",
+                "6a7dba9f7b387f52d134ea44"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update-Profile",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"userName\": \"password1234\",\r\n  \"oldPassword\": \"password123\",\r\n  \"newPassword\": \"newpassword123\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}auths/update-profile/6a7dba9f7b387f52d134ea44",
+                  "host": [
+                    "{{Local_URL}}auths"
+                  ],
+                  "path": [
+                    "update-profile",
+                    "6a7dba9f7b387f52d134ea44"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "167"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"a7-Qtqg2nF3RI3R2W7c4EHVGJyMaxw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Aug 2026 12:55:53 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Profile updated successfully!\",\n    \"user\": {\n        \"email\": \"rahul@example.com\",\n        \"role\": \"user\",\n        \"id\": \"6a7dba9f7b387f52d134ea44\",\n        \"userName\": \"password1234\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Logout User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{Local_URL}}auths/logout",
+              "host": [
+                "{{Local_URL}}auths"
+              ],
+              "path": [
+                "logout"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Logout User",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}auths/logout",
+                  "host": [
+                    "{{Local_URL}}auths"
+                  ],
+                  "path": [
+                    "logout"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "token=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "accessToken=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "refreshToken=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "53"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"35-vOBgWXGIRpc4Ao1fXkzLcYmgyu0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 13 Aug 2026 12:57:23 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Logged out successfully!\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Common",
+      "item": [
+        {
+          "name": "Add a feature image",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"image\": \"https://example.com/my-image.jpg\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local_URL}}commons/features/add",
+              "host": [
+                "{{Local_URL}}commons"
+              ],
+              "path": [
+                "features",
+                "add"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Add a feature image",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"image\": \"https://example.com/my-image.jpg\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}commons/features/add",
+                  "host": [
+                    "{{Local_URL}}commons"
+                  ],
+                  "path": [
+                    "features",
+                    "add"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "187"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"bb-NrhMDY6GlK/E1Pjat0zdZSg866s\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 14 Aug 2026 08:01:45 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"image\": \"https://example.com/my-image.jpg\",\n        \"_id\": \"6a7ecb69a8e0968eabb3ad69\",\n        \"createdAt\": \"2026-08-14T08:01:45.335Z\",\n        \"updatedAt\": \"2026-08-14T08:01:45.335Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get all feature images",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local_URL}}commons/features/get",
+              "host": [
+                "{{Local_URL}}commons"
+              ],
+              "path": [
+                "features",
+                "get"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get all feature images",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}commons/features/get",
+                  "host": [
+                    "{{Local_URL}}commons"
+                  ],
+                  "path": [
+                    "features",
+                    "get"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "189"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"bd-gqhlKA4h9z7m+Mg2Yj1tPO6GNnI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 14 Aug 2026 08:02:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"6a7ecb69a8e0968eabb3ad69\",\n            \"image\": \"https://example.com/my-image.jpg\",\n            \"createdAt\": \"2026-08-14T08:01:45.335Z\",\n            \"updatedAt\": \"2026-08-14T08:01:45.335Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Feature Banner Image",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Local_URL}}commons/features/delete/6a7ecb69a8e0968eabb3ad69",
+              "host": [
+                "{{Local_URL}}commons"
+              ],
+              "path": [
+                "features",
+                "delete",
+                "6a7ecb69a8e0968eabb3ad69"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Feature Banner Image",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}commons/features/delete/6a7ecb69a8e0968eabb3ad69",
+                  "host": [
+                    "{{Local_URL}}commons"
+                  ],
+                  "path": [
+                    "features",
+                    "delete",
+                    "6a7ecb69a8e0968eabb3ad69"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:5173"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "64"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"40-TAn1g9gG3tR7cW6esyws4qEaYIM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 14 Aug 2026 08:03:45 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Feature image deleted successfully!\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shop",
+      "item": [
+        {
+          "name": "Shop Products",
+          "item": [
+            {
+              "name": "Get Filtered Products",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}shops/products/get?men&brand=nike&sortBy=price-lowtohigh",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "products",
+                    "get"
+                  ],
+                  "query": [
+                    {
+                      "key": "men",
+                      "value": null
+                    },
+                    {
+                      "key": "brand",
+                      "value": "nike"
+                    },
+                    {
+                      "key": "sortBy",
+                      "value": "price-lowtohigh"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Get Filtered Products",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}shops/products/get?men&brand=nike&sortBy=price-lowtohigh",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "products",
+                        "get"
+                      ],
+                      "query": [
+                        {
+                          "key": "men",
+                          "value": null
+                        },
+                        {
+                          "key": "brand",
+                          "value": "nike"
+                        },
+                        {
+                          "key": "sortBy",
+                          "value": "price-lowtohigh"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "405"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"195-WGXCDmSLXsvJEajeua7APCGX158\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 08:08:10 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"6a7eca3603738cb2b0cf28dc\",\n            \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n            \"title\": \"Nike Air Max\",\n            \"description\": \"Comfortable running shoes\",\n            \"category\": \"men\",\n            \"brand\": \"nike\",\n            \"price\": 5000,\n            \"salePrice\": 4200,\n            \"totalStock\": 20,\n            \"averageReview\": 4.5,\n            \"createdAt\": \"2026-08-14T07:56:38.670Z\",\n            \"updatedAt\": \"2026-08-14T07:56:38.670Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get Single Product Details",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}shops/products/get/6a7eca3603738cb2b0cf28dc",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "products",
+                    "get",
+                    "6a7eca3603738cb2b0cf28dc"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Get Single Product Details",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}shops/products/get/6a7eca3603738cb2b0cf28dc",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "products",
+                        "get",
+                        "6a7eca3603738cb2b0cf28dc"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "403"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"193-oLPElhIMmpbVhq2Jd83E/g2ltmc\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 08:09:05 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a7eca3603738cb2b0cf28dc\",\n        \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n        \"title\": \"Nike Air Max\",\n        \"description\": \"Comfortable running shoes\",\n        \"category\": \"men\",\n        \"brand\": \"nike\",\n        \"price\": 5000,\n        \"salePrice\": 4200,\n        \"totalStock\": 20,\n        \"averageReview\": 4.5,\n        \"createdAt\": \"2026-08-14T07:56:38.670Z\",\n        \"updatedAt\": \"2026-08-14T07:56:38.670Z\",\n        \"__v\": 0\n    }\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Cart Management",
+          "item": [
+            {
+              "name": "Add to Cart",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"userId\": \"6a7dba9f7b387f52d134ea44\",\r\n  \"productId\": \"6a7eca3603738cb2b0cf28dc\",\r\n  \"quantity\": 1\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}shops/carts/add",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "carts",
+                    "add"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Add to Cart",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"userId\": \"6a7dba9f7b387f52d134ea44\",\r\n  \"productId\": \"6a7eca3603738cb2b0cf28dc\",\r\n  \"quantity\": 1\r\n}\r\n",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{Local_URL}}shops/carts/add",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "carts",
+                        "add"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "277"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"115-iH2EWNhDgwVxR5Vphi1wGvWPUYQ\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 08:10:40 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"userId\": \"6a7dba9f7b387f52d134ea44\",\n        \"items\": [\n            {\n                \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n                \"quantity\": 1,\n                \"_id\": \"6a7ecd80a8e0968eabb3ad73\"\n            }\n        ],\n        \"_id\": \"6a7ecd80a8e0968eabb3ad72\",\n        \"createdAt\": \"2026-08-14T08:10:40.128Z\",\n        \"updatedAt\": \"2026-08-14T08:10:40.128Z\",\n        \"__v\": 0\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get User Cart",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}shops/carts/get/6a7dba9f7b387f52d134ea44",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "carts",
+                    "get",
+                    "6a7dba9f7b387f52d134ea44"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Get User Cart",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}shops/carts/get/6a7dba9f7b387f52d134ea44",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "carts",
+                        "get",
+                        "6a7dba9f7b387f52d134ea44"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "393"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"189-jUPYBXQUeWUJoJnEj6TlIVRYmdU\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 08:12:12 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a7ecd80a8e0968eabb3ad72\",\n        \"userId\": \"6a7dba9f7b387f52d134ea44\",\n        \"items\": [\n            {\n                \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n                \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n                \"title\": \"Nike Air Max\",\n                \"price\": 5000,\n                \"salePrice\": 4200,\n                \"quantity\": 1\n            }\n        ],\n        \"createdAt\": \"2026-08-14T08:10:40.128Z\",\n        \"updatedAt\": \"2026-08-14T08:10:40.128Z\",\n        \"__v\": 0\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "Update Cart Item Quantity",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": \"6a7dba9f7b387f52d134ea44\",\r\n    \"productId\": \"6a7eca3603738cb2b0cf28dc\",\r\n    \"quantity\": 3\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}shops/carts/update-cart",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "carts",
+                    "update-cart"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Update Cart Item Quantity",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"userId\": \"6a7dba9f7b387f52d134ea44\",\r\n    \"productId\": \"6a7eca3603738cb2b0cf28dc\",\r\n    \"quantity\": 3\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{Local_URL}}shops/carts/update-cart",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "carts",
+                        "update-cart"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "393"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"189-ADpOjMlvSMBwRLuGBpBLmRlJE/k\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 08:14:33 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a7ecd80a8e0968eabb3ad72\",\n        \"userId\": \"6a7dba9f7b387f52d134ea44\",\n        \"items\": [\n            {\n                \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n                \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n                \"title\": \"Nike Air Max\",\n                \"price\": 5000,\n                \"salePrice\": 4200,\n                \"quantity\": 3\n            }\n        ],\n        \"createdAt\": \"2026-08-14T08:10:40.128Z\",\n        \"updatedAt\": \"2026-08-14T08:14:33.123Z\",\n        \"__v\": 0\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "Delete Item from Cart",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}shops/carts/6a7dba9f7b387f52d134ea44/6a7eca3603738cb2b0cf28dc",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "carts",
+                    "6a7dba9f7b387f52d134ea44",
+                    "6a7eca3603738cb2b0cf28dc"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Delete Item from Cart",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}shops/carts/6a7dba9f7b387f52d134ea44/6a7eca3603738cb2b0cf28dc",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "carts",
+                        "6a7dba9f7b387f52d134ea44",
+                        "6a7eca3603738cb2b0cf28dc"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "191"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"bf-XJJAoeDFn96f8NgdUzZVH7iVnG8\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 08:15:52 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a7ecd80a8e0968eabb3ad72\",\n        \"userId\": \"6a7dba9f7b387f52d134ea44\",\n        \"items\": [],\n        \"createdAt\": \"2026-08-14T08:10:40.128Z\",\n        \"updatedAt\": \"2026-08-14T08:15:52.557Z\",\n        \"__v\": 1\n    }\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Address Management",
+          "item": [
+            {
+              "name": "Add Address",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"userId\": \"6a7dba9f7b387f52d134ea44\",\r\n  \"address\": \"123 Main Street\",\r\n  \"city\": \"Mumbai\",\r\n  \"pincode\": \"400001\",\r\n  \"phone\": \"9876543210\",\r\n  \"notes\": \"Near landmark\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}shops/addresses/add",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "addresses",
+                    "add"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Add Address",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"userId\": \"6a7dba9f7b387f52d134ea44\",\r\n  \"address\": \"123 Main Street\",\r\n  \"city\": \"Mumbai\",\r\n  \"pincode\": \"400001\",\r\n  \"phone\": \"9876543210\",\r\n  \"notes\": \"Near landmark\"\r\n}\r\n",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{Local_URL}}shops/addresses/add",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "addresses",
+                        "add"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "288"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"120-fN9OxQoOIDJYerg9sYX53MFJmaM\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 08:18:14 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"userId\": \"6a7dba9f7b387f52d134ea44\",\n        \"address\": \"123 Main Street\",\n        \"city\": \"Mumbai\",\n        \"pincode\": \"400001\",\n        \"phone\": \"9876543210\",\n        \"notes\": \"Near landmark\",\n        \"_id\": \"6a7ecf46a8e0968eabb3ad84\",\n        \"createdAt\": \"2026-08-14T08:18:14.121Z\",\n        \"updatedAt\": \"2026-08-14T08:18:14.121Z\",\n        \"__v\": 0\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get User Addresses",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}shops/addresses/get/6a7dba9f7b387f52d134ea44",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "addresses",
+                    "get",
+                    "6a7dba9f7b387f52d134ea44"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Get User Addresses",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}shops/addresses/get/6a7dba9f7b387f52d134ea44",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "addresses",
+                        "get",
+                        "6a7dba9f7b387f52d134ea44"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "290"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"122-ktM5htf8B9J2KWZbR1HN0/hPGJQ\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 08:19:38 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"6a7ecf46a8e0968eabb3ad84\",\n            \"userId\": \"6a7dba9f7b387f52d134ea44\",\n            \"address\": \"123 Main Street\",\n            \"city\": \"Mumbai\",\n            \"pincode\": \"400001\",\n            \"phone\": \"9876543210\",\n            \"notes\": \"Near landmark\",\n            \"createdAt\": \"2026-08-14T08:18:14.121Z\",\n            \"updatedAt\": \"2026-08-14T08:18:14.121Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "name": "Update Address",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"address\": \"Flat 402, Block B, Green Heights\",\r\n  \"city\": \"Delhi\",\r\n  \"pincode\": \"110001\",\r\n  \"phone\": \"9876543210\",\r\n  \"notes\": \"Call before delivery\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}shops/addresses/update/6a7dba9f7b387f52d134ea44/6a7ecf46a8e0968eabb3ad84",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "addresses",
+                    "update",
+                    "6a7dba9f7b387f52d134ea44",
+                    "6a7ecf46a8e0968eabb3ad84"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Update Address",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"address\": \"Flat 402, Block B, Green Heights\",\r\n  \"city\": \"Delhi\",\r\n  \"pincode\": \"110001\",\r\n  \"phone\": \"9876543210\",\r\n  \"notes\": \"Call before delivery\"\r\n}\r\n",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{Local_URL}}shops/addresses/update/6a7dba9f7b387f52d134ea44/6a7ecf46a8e0968eabb3ad84",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "addresses",
+                        "update",
+                        "6a7dba9f7b387f52d134ea44",
+                        "6a7ecf46a8e0968eabb3ad84"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "311"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"137-jPL/+OSWRDVAlCleRP86sEzQ/GU\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 08:21:48 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a7ecf46a8e0968eabb3ad84\",\n        \"userId\": \"6a7dba9f7b387f52d134ea44\",\n        \"address\": \"Flat 402, Block B, Green Heights\",\n        \"city\": \"Delhi\",\n        \"pincode\": \"110001\",\n        \"phone\": \"9876543210\",\n        \"notes\": \"Call before delivery\",\n        \"createdAt\": \"2026-08-14T08:18:14.121Z\",\n        \"updatedAt\": \"2026-08-14T08:21:48.781Z\",\n        \"__v\": 0\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "Delete Address",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}shops/addresses/delete/6a7dba9f7b387f52d134ea44/6a7ecf46a8e0968eabb3ad84",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "addresses",
+                    "delete",
+                    "6a7dba9f7b387f52d134ea44",
+                    "6a7ecf46a8e0968eabb3ad84"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Delete Address",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}shops/addresses/delete/6a7dba9f7b387f52d134ea44/6a7ecf46a8e0968eabb3ad84",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "addresses",
+                        "delete",
+                        "6a7dba9f7b387f52d134ea44",
+                        "6a7ecf46a8e0968eabb3ad84"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "57"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"39-lS9oC/ng7lO/JxnB1gQd517qG6Q\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 08:22:32 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"message\": \"Address deleted successfully\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Customer Order Creation",
+          "item": [
+            {
+              "name": "Create Order",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"userId\": \"6a7dba9f7b387f52d134ea44\",\r\n  \"cartId\": \"6a7ecd80a8e0968eabb3ad72\",\r\n  \"cartItems\": [\r\n    {\r\n      \"productId\": \"6a7eca3603738cb2b0cf28dc\",\r\n      \"title\": \"Nike Air Max\",\r\n      \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\r\n      \"price\": \"5000\",\r\n      \"quantity\": 1\r\n    }\r\n  ],\r\n  \"addressInfo\": {\r\n    \"addressId\": \"6a7ecf46a8e0968eabb3ad84\",\r\n    \"address\": \"123 Main Street\",\r\n    \"city\": \"Mumbai\",\r\n    \"pincode\": \"400001\",\r\n    \"phone\": \"9876543210\",\r\n    \"notes\": \"Deliver in morning\"\r\n  },\r\n  \"orderStatus\": \"pending\",\r\n  \"paymentMethod\": \"cod\",\r\n  \"paymentStatus\": \"pending\",\r\n  \"totalAmount\": 5000,\r\n  \"orderDate\": \"2026-08-14\",\r\n  \"paymentId\": \"\",\r\n  \"payerId\": \"\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}shops/orders/create",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "orders",
+                    "create"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Create Order",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"userId\": \"6a7dba9f7b387f52d134ea44\",\r\n  \"cartId\": \"6a7ecd80a8e0968eabb3ad72\",\r\n  \"cartItems\": [\r\n    {\r\n      \"productId\": \"6a7eca3603738cb2b0cf28dc\",\r\n      \"title\": \"Nike Air Max\",\r\n      \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\r\n      \"price\": \"5000\",\r\n      \"quantity\": 1\r\n    }\r\n  ],\r\n  \"addressInfo\": {\r\n    \"addressId\": \"6a7ecf46a8e0968eabb3ad84\",\r\n    \"address\": \"123 Main Street\",\r\n    \"city\": \"Mumbai\",\r\n    \"pincode\": \"400001\",\r\n    \"phone\": \"9876543210\",\r\n    \"notes\": \"Deliver in morning\"\r\n  },\r\n  \"orderStatus\": \"pending\",\r\n  \"paymentMethod\": \"paypal\",\r\n  \"paymentStatus\": \"pending\",\r\n  \"totalAmount\": 5000,\r\n  \"orderDate\": \"2026-08-14\",\r\n  \"paymentId\": \"\",\r\n  \"payerId\": \"\"\r\n}\r\n",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{Local_URL}}shops/orders/create",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "orders",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "136"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"88-KtcqkShNG+7su4TMDOY1+SqFgbs\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 08:30:10 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"approvalURL\": \"https://www.sandbox.paypal.com/checkoutnow?token=26J26817KL348311G\",\n    \"orderId\": \"6a7ed212cdc78e56727624d2\"\n}"
+                },
+                {
+                  "name": "Create Order-COD",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"userId\": \"6a7dba9f7b387f52d134ea44\",\r\n  \"cartId\": \"6a7ecd80a8e0968eabb3ad72\",\r\n  \"cartItems\": [\r\n    {\r\n      \"productId\": \"6a7eca3603738cb2b0cf28dc\",\r\n      \"title\": \"Nike Air Max\",\r\n      \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\r\n      \"price\": \"5000\",\r\n      \"quantity\": 1\r\n    }\r\n  ],\r\n  \"addressInfo\": {\r\n    \"addressId\": \"6a7ecf46a8e0968eabb3ad84\",\r\n    \"address\": \"123 Main Street\",\r\n    \"city\": \"Mumbai\",\r\n    \"pincode\": \"400001\",\r\n    \"phone\": \"9876543210\",\r\n    \"notes\": \"Deliver in morning\"\r\n  },\r\n  \"orderStatus\": \"pending\",\r\n  \"paymentMethod\": \"cod\",\r\n  \"paymentStatus\": \"pending\",\r\n  \"totalAmount\": 5000,\r\n  \"orderDate\": \"2026-08-14\",\r\n  \"paymentId\": \"\",\r\n  \"payerId\": \"\"\r\n}\r\n",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{Local_URL}}shops/orders/create",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "orders",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "127"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"7f-Xs//zsG0RhrZuGNANNrGYiRfV/E\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 09:19:20 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"isCOD\": true,\n    \"orderId\": \"6a7edd98cdc78e56727624d5\",\n    \"message\": \"Order placed successfully with Cash on Delivery!\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Capture Payment (Complete Order)",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"paymentId\": \"26J26817KL348311G\",\r\n  \"payerId\": \"PAYER_ID_FROM_PAYPAL\",\r\n  \"orderId\": \"6a7ed212cdc78e56727624d2\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}shops/orders/create",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "orders",
+                    "create"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get Customer's Orders List",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}shops/orders/list/6a7dba9f7b387f52d134ea44",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "orders",
+                    "list",
+                    "6a7dba9f7b387f52d134ea44"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Get Customer's Orders List",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}shops/orders/list/6a7dba9f7b387f52d134ea44",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "orders",
+                        "list",
+                        "6a7dba9f7b387f52d134ea44"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "1358"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"54e-89UMHj9gqpm//Nk60BNaINaNJJk\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 11:23:15 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"addressInfo\": {\n                \"addressId\": \"6a7ecf46a8e0968eabb3ad84\",\n                \"address\": \"123 Main Street\",\n                \"city\": \"Mumbai\",\n                \"pincode\": \"400001\",\n                \"phone\": \"9876543210\",\n                \"notes\": \"Deliver in morning\"\n            },\n            \"_id\": \"6a7ed212cdc78e56727624d2\",\n            \"userId\": \"6a7dba9f7b387f52d134ea44\",\n            \"cartId\": \"6a7ecd80a8e0968eabb3ad72\",\n            \"cartItems\": [\n                {\n                    \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n                    \"title\": \"Nike Air Max\",\n                    \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n                    \"price\": \"5000\",\n                    \"quantity\": 1,\n                    \"_id\": \"6a7ed212cdc78e56727624d3\"\n                }\n            ],\n            \"orderStatus\": \"pending\",\n            \"paymentMethod\": \"paypal\",\n            \"paymentStatus\": \"pending\",\n            \"totalAmount\": 5000,\n            \"orderDate\": \"2026-08-14T00:00:00.000Z\",\n            \"paymentId\": \"26J26817KL348311G\",\n            \"__v\": 0\n        },\n        {\n            \"addressInfo\": {\n                \"addressId\": \"6a7ecf46a8e0968eabb3ad84\",\n                \"address\": \"123 Main Street\",\n                \"city\": \"Mumbai\",\n                \"pincode\": \"400001\",\n                \"phone\": \"9876543210\",\n                \"notes\": \"Deliver in morning\"\n            },\n            \"_id\": \"6a7edd98cdc78e56727624d5\",\n            \"userId\": \"6a7dba9f7b387f52d134ea44\",\n            \"cartId\": \"6a7ecd80a8e0968eabb3ad72\",\n            \"cartItems\": [\n                {\n                    \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n                    \"title\": \"Nike Air Max\",\n                    \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n                    \"price\": \"5000\",\n                    \"quantity\": 1,\n                    \"_id\": \"6a7edd98cdc78e56727624d6\"\n                }\n            ],\n            \"orderStatus\": \"delivered\",\n            \"paymentMethod\": \"cod\",\n            \"paymentStatus\": \"pending\",\n            \"totalAmount\": 5000,\n            \"orderDate\": \"2026-08-14T00:00:00.000Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get order details",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}shops/orders/list/6a7dba9f7b387f52d134ea44",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "orders",
+                    "list",
+                    "6a7dba9f7b387f52d134ea44"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Get order details",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}shops/orders/list/6a7dba9f7b387f52d134ea44",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "orders",
+                        "list",
+                        "6a7dba9f7b387f52d134ea44"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "1358"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"54e-89UMHj9gqpm//Nk60BNaINaNJJk\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 11:26:11 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"addressInfo\": {\n                \"addressId\": \"6a7ecf46a8e0968eabb3ad84\",\n                \"address\": \"123 Main Street\",\n                \"city\": \"Mumbai\",\n                \"pincode\": \"400001\",\n                \"phone\": \"9876543210\",\n                \"notes\": \"Deliver in morning\"\n            },\n            \"_id\": \"6a7ed212cdc78e56727624d2\",\n            \"userId\": \"6a7dba9f7b387f52d134ea44\",\n            \"cartId\": \"6a7ecd80a8e0968eabb3ad72\",\n            \"cartItems\": [\n                {\n                    \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n                    \"title\": \"Nike Air Max\",\n                    \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n                    \"price\": \"5000\",\n                    \"quantity\": 1,\n                    \"_id\": \"6a7ed212cdc78e56727624d3\"\n                }\n            ],\n            \"orderStatus\": \"pending\",\n            \"paymentMethod\": \"paypal\",\n            \"paymentStatus\": \"pending\",\n            \"totalAmount\": 5000,\n            \"orderDate\": \"2026-08-14T00:00:00.000Z\",\n            \"paymentId\": \"26J26817KL348311G\",\n            \"__v\": 0\n        },\n        {\n            \"addressInfo\": {\n                \"addressId\": \"6a7ecf46a8e0968eabb3ad84\",\n                \"address\": \"123 Main Street\",\n                \"city\": \"Mumbai\",\n                \"pincode\": \"400001\",\n                \"phone\": \"9876543210\",\n                \"notes\": \"Deliver in morning\"\n            },\n            \"_id\": \"6a7edd98cdc78e56727624d5\",\n            \"userId\": \"6a7dba9f7b387f52d134ea44\",\n            \"cartId\": \"6a7ecd80a8e0968eabb3ad72\",\n            \"cartItems\": [\n                {\n                    \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n                    \"title\": \"Nike Air Max\",\n                    \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n                    \"price\": \"5000\",\n                    \"quantity\": 1,\n                    \"_id\": \"6a7edd98cdc78e56727624d6\"\n                }\n            ],\n            \"orderStatus\": \"delivered\",\n            \"paymentMethod\": \"cod\",\n            \"paymentStatus\": \"pending\",\n            \"totalAmount\": 5000,\n            \"orderDate\": \"2026-08-14T00:00:00.000Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Review",
+          "item": [
+            {
+              "name": "Add a Product Review",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"productId\": \"6a7eca3603738cb2b0cf28dc\",\r\n    \"userId\": \"6a7dba9f7b387f52d134ea44\",\r\n    \"userName\": \"Shivam\",\r\n    \"reviewMessage\": \"Great!\",\r\n    \"reviewValue\": 5\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}shops/reviews/add",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "reviews",
+                    "add"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Add a Product Review",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"productId\": \"6a7eca3603738cb2b0cf28dc\",\r\n    \"userId\": \"6a7dba9f7b387f52d134ea44\",\r\n    \"userName\": \"Shivam\",\r\n    \"reviewMessage\": \"Great!\",\r\n    \"reviewValue\": 5\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{Local_URL}}shops/reviews/add",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "reviews",
+                        "add"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "280"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"118-gUAAGWI3KX47M9gAICTXmMu/BWY\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 11:33:06 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n        \"userId\": \"6a7dba9f7b387f52d134ea44\",\n        \"userName\": \"Shivam\",\n        \"reviewMessage\": \"Great!\",\n        \"reviewValue\": 5,\n        \"_id\": \"6a7efcf20d375487ac7269b4\",\n        \"createdAt\": \"2026-08-14T11:33:06.702Z\",\n        \"updatedAt\": \"2026-08-14T11:33:06.702Z\",\n        \"__v\": 0\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get All Reviews for a Product",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}shops/reviews/6a7eca3603738cb2b0cf28dc",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "reviews",
+                    "6a7eca3603738cb2b0cf28dc"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Get All Reviews for a Product",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}shops/reviews/6a7eca3603738cb2b0cf28dc",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "reviews",
+                        "6a7eca3603738cb2b0cf28dc"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "282"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"11a-ND+CMOi74rNHnRdo8+JtMx0nihI\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 11:34:12 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"6a7efcf20d375487ac7269b4\",\n            \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n            \"userId\": \"6a7dba9f7b387f52d134ea44\",\n            \"userName\": \"Shivam\",\n            \"reviewMessage\": \"Great!\",\n            \"reviewValue\": 5,\n            \"createdAt\": \"2026-08-14T11:33:06.702Z\",\n            \"updatedAt\": \"2026-08-14T11:33:06.702Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Search",
+          "item": [
+            {
+              "name": "Search Products",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}shops/searches/nike",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "searches",
+                    "nike"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Search Products",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}shops/searches/nike",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "searches",
+                        "nike"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "405"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"195-wNegeWXaY7vsUlblYX1MMAninL4\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 11:29:13 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"6a7eca3603738cb2b0cf28dc\",\n            \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n            \"title\": \"Nike Air Max\",\n            \"description\": \"Comfortable running shoes\",\n            \"category\": \"men\",\n            \"brand\": \"nike\",\n            \"price\": 5000,\n            \"salePrice\": 4200,\n            \"totalStock\": 19,\n            \"averageReview\": 4.5,\n            \"createdAt\": \"2026-08-14T07:56:38.670Z\",\n            \"updatedAt\": \"2026-08-14T09:19:20.276Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Wishlist",
+          "item": [
+            {
+              "name": "Add to Wishlist",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"productId\": \"6a7eca3603738cb2b0cf28dc\",\r\n    \"userId\": \"6a7dba9f7b387f52d134ea44\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Local_URL}}shops/wishlists/add",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "wishlists",
+                    "add"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Add to Wishlist",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"productId\": \"6a7eca3603738cb2b0cf28dc\",\r\n    \"userId\": \"6a7dba9f7b387f52d134ea44\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{Local_URL}}shops/wishlists/add",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "wishlists",
+                        "add"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "413"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"19d-bkfFlDFudZAPWa3C/kk3sl2ze+U\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 11:35:31 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"userId\": \"6a7dba9f7b387f52d134ea44\",\n        \"items\": [\n            {\n                \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n                \"title\": \"Nike Air Max\",\n                \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n                \"price\": 5000,\n                \"salePrice\": 4200,\n                \"_id\": \"6a7efd830d375487ac7269bc\"\n            }\n        ],\n        \"_id\": \"6a7efd830d375487ac7269bb\",\n        \"createdAt\": \"2026-08-14T11:35:31.549Z\",\n        \"updatedAt\": \"2026-08-14T11:35:31.549Z\",\n        \"__v\": 0\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get to Wishlist",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}shops/wishlists/get/6a7dba9f7b387f52d134ea44",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "wishlists",
+                    "get",
+                    "6a7dba9f7b387f52d134ea44"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Get to Wishlist",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}shops/wishlists/get/6a7dba9f7b387f52d134ea44",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "wishlists",
+                        "get",
+                        "6a7dba9f7b387f52d134ea44"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "413"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"19d-VUunhmN+ocGwgM1s/+pH552wXHM\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 11:38:07 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a7efd830d375487ac7269bb\",\n        \"userId\": \"6a7dba9f7b387f52d134ea44\",\n        \"items\": [\n            {\n                \"productId\": \"6a7eca3603738cb2b0cf28dc\",\n                \"title\": \"Nike Air Max\",\n                \"image\": \"http://res.cloudinary.com/dulv7fsxs/image/upload/v1786694080/hyt1tsftm8422mpjhbee.jpg\",\n                \"price\": 5000,\n                \"salePrice\": 4200,\n                \"_id\": \"6a7efd830d375487ac7269bc\"\n            }\n        ],\n        \"createdAt\": \"2026-08-14T11:35:31.549Z\",\n        \"updatedAt\": \"2026-08-14T11:35:31.549Z\",\n        \"__v\": 0\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "Remove From Wishlist",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{Local_URL}}shops/wishlists/delete/6a7dba9f7b387f52d134ea44/6a7eca3603738cb2b0cf28dc",
+                  "host": [
+                    "{{Local_URL}}shops"
+                  ],
+                  "path": [
+                    "wishlists",
+                    "delete",
+                    "6a7dba9f7b387f52d134ea44",
+                    "6a7eca3603738cb2b0cf28dc"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Remove From Wishlist",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{Local_URL}}shops/wishlists/delete/6a7dba9f7b387f52d134ea44/6a7eca3603738cb2b0cf28dc",
+                      "host": [
+                        "{{Local_URL}}shops"
+                      ],
+                      "path": [
+                        "wishlists",
+                        "delete",
+                        "6a7dba9f7b387f52d134ea44",
+                        "6a7eca3603738cb2b0cf28dc"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "http://localhost:5173"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "191"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"bf-rbf7FCbLMVJ2AjE3w9VB42Dayuw\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 14 Aug 2026 11:39:25 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a7efd830d375487ac7269bb\",\n        \"userId\": \"6a7dba9f7b387f52d134ea44\",\n        \"items\": [],\n        \"createdAt\": \"2026-08-14T11:35:31.549Z\",\n        \"updatedAt\": \"2026-08-14T11:39:25.407Z\",\n        \"__v\": 1\n    }\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{Token_URL}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "Local_URL",
+      "value": ""
+    },
+    {
+      "key": "Live_URL",
+      "value": ""
+    },
+    {
+      "key": "Token_URL",
+      "value": ""
+    }
+  ]
+}

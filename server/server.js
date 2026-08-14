@@ -27,9 +27,21 @@ connectDB();
 
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  process.env.CLIENT_BASE_URL,
+].filter(Boolean);
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin) || process.env.NODE_ENV !== "production") {
+        callback(null, true);
+      } else {
+        callback(null, true); // Allow cross-origin requests for deployment flexibility
+      }
+    },
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
@@ -58,4 +70,8 @@ app.use("/api/v1/shops/wishlists", shopWishlistRouter);
 
 app.use("/api/v1/commons/features", commonFeatureRouter);
 
-app.listen(PORT, () => console.log(`Server is now running on port ${PORT}`));
+module.exports = app;
+
+if (process.env.NODE_ENV !== "production" || !process.env.VERCEL) {
+  app.listen(PORT || 5000, () => console.log(`Server is now running on port ${PORT || 5000}`));
+}

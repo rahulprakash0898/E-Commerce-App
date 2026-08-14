@@ -15,6 +15,14 @@ router.post("/login", loginUser);
 router.post("/logout", logoutUser);
 router.post("/refresh-token", refreshTokenController);
 router.put("/update-profile/:userId", authMiddleware, updateProfile);
+router.get("/check-auth", authMiddleware, (req, res) => {
+  const user = req.user;
+  res.status(200).json({
+    success: true,
+    message: "Authenticated user!",
+    user,
+  });
+});
 router.get("/check-auths", authMiddleware, (req, res) => {
   const user = req.user;
   res.status(200).json({
