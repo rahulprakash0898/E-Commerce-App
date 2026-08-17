@@ -8,17 +8,20 @@ exports.connectDB = async () => {
     return;
   }
 
-  const dbUrl = MONGODB_URL || process.env.MONGODB_URL;
+  const dbUrl = MONGODB_URL || process.env.MONGODB_URL || process.env.MONGODB_URI;
   if (!dbUrl) {
-    console.error("Error: MONGODB_URL is not defined in environment variables.");
-    return;
+    throw new Error("MONGODB_URL is missing in environment variables on Vercel.");
   }
 
   try {
-    const db = await mongoose.connect(dbUrl);
+    const db = await mongoose.connect(dbUrl, {
+      serverSelectionTimeoutMS: 5000,
+    });
     isConnected = db.connections[0].readyState;
     console.log("MongoDB connected successfully");
   } catch (error) {
     console.error("MongoDB connection error:", error);
+    throw error;
   }
-};
+};
+

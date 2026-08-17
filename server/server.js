@@ -22,9 +22,6 @@ const commonFeatureRouter = require("./routes/common/feature-routes");
 //create a database connection -> u can also
 //create a separate file for this and then import/use that file here
 
-
-connectDB();
-
 const app = express();
 
 const allowedOrigins = [
@@ -56,6 +53,21 @@ app.use(
 
 app.use(cookieParser());
 app.use(express.json());
+
+// Ensure Database is connected before executing any route handlers
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    console.error("Database connection error:", error);
+    return res.status(500).json({
+      success: false,
+      message: `Database Connection Failed: ${error.message}`,
+    });
+  }
+});
+
 app.use("/api/v1/auths", authRouter);
 app.use("/api/v1/admins/products", adminProductsRouter);
 app.use("/api/v1/admins/orders", adminOrderRouter);
