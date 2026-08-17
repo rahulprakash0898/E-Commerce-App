@@ -4,6 +4,11 @@
     {
       "source": "/api/v1/:path*",
       "destination": "/api"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
     }
   ]
 }
+
