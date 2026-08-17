@@ -1,9 +1,24 @@
 const mongoose = require("mongoose");
-const { MONGODB_URL, ATLAS_URL } = require(".");
-exports.connectDB = async () => {
-  // await mongoose.connect(ATLAS_URL);
-  // console.log(`MongoDB connected`, ATLAS_URL);
+const { MONGODB_URL } = require(".");
 
-  await mongoose.connect(MONGODB_URL);
-  console.log(`MongoDB connected`, MONGODB_URL);
-};
+let isConnected = false;
+
+exports.connectDB = async () => {
+  if (isConnected || mongoose.connection.readyState >= 1) {
+    return;
+  }
+
+  const dbUrl = MONGODB_URL || process.env.MONGODB_URL;
+  if (!dbUrl) {
+    console.error("Error: MONGODB_URL is not defined in environment variables.");
+    return;
+  }
+
+  try {
+    const db = await mongoose.connect(dbUrl);
+    isConnected = db.connections[0].readyState;
+    console.log("MongoDB connected successfully");
+  } catch (error) {
+    console.error("MongoDB connection error:", error);
+  }
+};

@@ -54,10 +54,10 @@ const registerUser = async (req, res) => {
         user: userPayload,
       });
   } catch (e) {
-    console.log(e);
+    console.error("Register Error:", e);
     res.status(500).json({
       success: false,
-      message: "Some error occured",
+      message: e.message || "Some error occured",
     });
   }
 };
